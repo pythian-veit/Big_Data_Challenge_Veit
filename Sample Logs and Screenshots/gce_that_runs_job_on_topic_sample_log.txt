@@ -1,0 +1,284 @@
+kenrick@cronworker-1:~/gce$ ./test_executor.py
+2017-03-30 04:34:02,096 - cron_executor - DEBUG - getting subscription
+2017-03-30 04:34:02,542 - cron_executor - DEBUG - deleted existing subscription
+2017-03-30 04:34:02,543 - cron_executor - DEBUG - creating subscription
+2017-03-30 04:34:03,807 - cron_executor - DEBUG - subscription {u'topic': u'projects/big-data-challenge-162202/topics/json_to_avro_convert', u'ackDeadlineSeconds': 60, u'pushConfig': {}, u'name': u'projects/big-data-challenge-162202/subscriptions/json_to_avro_convert_watch_json_to_avro_convert_task'}
+2017-03-30 04:34:03,817 - cron_executor - DEBUG - pulling messages
+2017-03-30 04:34:38,457 - cron_executor - DEBUG - number msgs: 1
+2017-03-30 04:34:38,458 - cron_executor - DEBUG - processing QBJMJAtESVMrQwsqWBFOBCEhPjA-RVNEUAYWLF1GSFE3GQhoUQ5PXiM_NSAoRRQICBQFfH12QlN1XV9yaFENGXJ9YHA4WxUIU0xWel9RGg5oVlxnNlEvJ3p0aHFoXhQBCkBSd19dM6jf991BZic9XxJLLD5-Lz5FQV4
+2017-03-30 04:34:39,468 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Creating cluster.
+
+2017-03-30 04:34:39,468 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Waiting for cluster creation
+
+2017-03-30 04:35:19,516 - cron_executor - DEBUG - extending lease
+2017-03-30 04:36:01,685 - cron_executor - DEBUG - extending lease
+2017-03-30 04:36:03,723 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Cluster created.
+
+2017-03-30 04:36:03,724 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - cluster-1 - RUNNING
+
+2017-03-30 04:36:03,726 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - {'projectId': 'big-data-challenge-162202', 'job': {'pysparkJob': {'mainPythonFileUri': 'gs://bdc_source/json_to_avro.py', 'properties': {'spark.jars.packages': 'com.databricks:spark-avro_2.11:3.2.0'}}, 'placement': {'clusterName': 'cluster-1'}}}
+
+2017-03-30 04:36:03,728 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Submitted job ID 2db4e238-8a9b-4234-af75-099bb09fb717
+
+2017-03-30 04:36:03,741 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Waiting for job to finish...
+
+2017-03-30 04:36:42,788 - cron_executor - DEBUG - extending lease
+2017-03-30 04:37:22,945 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Job finished
+
+2017-03-30 04:37:22,945 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Downloading output file
+
+2017-03-30 04:37:23,948 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Received job output Ivy Default Cache set to: /root/.ivy2/cache
+
+2017-03-30 04:37:23,949 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - The jars for the packages stored in: /root/.ivy2/jars
+
+2017-03-30 04:37:23,951 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - :: loading settings :: url = jar:file:/usr/lib/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+2017-03-30 04:37:23,953 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - com.databricks#spark-avro_2.11 added as a dependency
+
+2017-03-30 04:37:23,961 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent;1.0
+
+2017-03-30 04:37:23,963 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	confs: [default]
+
+2017-03-30 04:37:23,975 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found com.databricks#spark-avro_2.11;3.2.0 in central
+
+2017-03-30 04:37:23,979 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.slf4j#slf4j-api;1.7.5 in central
+
+2017-03-30 04:37:23,984 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.apache.avro#avro;1.7.6 in central
+
+2017-03-30 04:37:23,986 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.codehaus.jackson#jackson-core-asl;1.9.13 in central
+
+2017-03-30 04:37:23,994 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.codehaus.jackson#jackson-mapper-asl;1.9.13 in central
+
+2017-03-30 04:37:24,000 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found com.thoughtworks.paranamer#paranamer;2.3 in central
+
+2017-03-30 04:37:24,009 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.xerial.snappy#snappy-java;1.0.5 in central
+
+2017-03-30 04:37:24,020 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.apache.commons#commons-compress;1.4.1 in central
+
+2017-03-30 04:37:24,024 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	found org.tukaani#xz;1.0 in central
+
+2017-03-30 04:37:24,028 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/com/databricks/spark-avro_2.11/3.2.0/spark-avro_2.11-3.2.0.jar ...
+
+2017-03-30 04:37:24,034 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] com.databricks#spark-avro_2.11;3.2.0!spark-avro_2.11.jar (32ms)
+
+2017-03-30 04:37:24,041 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar ...
+
+2017-03-30 04:37:24,064 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.5!slf4j-api.jar (15ms)
+
+2017-03-30 04:37:24,077 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/apache/avro/avro/1.7.6/avro-1.7.6.jar ...
+
+2017-03-30 04:37:24,082 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.apache.avro#avro;1.7.6!avro.jar(bundle) (64ms)
+
+2017-03-30 04:37:24,085 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar ...
+
+2017-03-30 04:37:24,104 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.codehaus.jackson#jackson-core-asl;1.9.13!jackson-core-asl.jar (35ms)
+
+2017-03-30 04:37:24,112 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar ...
+
+2017-03-30 04:37:24,117 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.codehaus.jackson#jackson-mapper-asl;1.9.13!jackson-mapper-asl.jar (78ms)
+
+2017-03-30 04:37:24,123 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar ...
+
+2017-03-30 04:37:24,131 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] com.thoughtworks.paranamer#paranamer;2.3!paranamer.jar (13ms)
+
+2017-03-30 04:37:24,139 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.jar ...
+
+2017-03-30 04:37:24,148 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.0.5!snappy-java.jar(bundle) (86ms)
+
+2017-03-30 04:37:24,152 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar ...
+
+2017-03-30 04:37:24,158 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.apache.commons#commons-compress;1.4.1!commons-compress.jar (24ms)
+
+2017-03-30 04:37:24,171 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - downloading https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar ...
+
+2017-03-30 04:37:24,174 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	[SUCCESSFUL ] org.tukaani#xz;1.0!xz.jar (15ms)
+
+2017-03-30 04:37:24,182 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - :: resolution report :: resolve 2817ms :: artifacts dl 369ms
+
+2017-03-30 04:37:24,190 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	:: modules in use:
+
+2017-03-30 04:37:24,204 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	com.databricks#spark-avro_2.11;3.2.0 from central in [default]
+
+2017-03-30 04:37:24,211 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	com.thoughtworks.paranamer#paranamer;2.3 from central in [default]
+
+2017-03-30 04:37:24,216 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.apache.avro#avro;1.7.6 from central in [default]
+
+2017-03-30 04:37:24,219 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.apache.commons#commons-compress;1.4.1 from central in [default]
+
+2017-03-30 04:37:24,221 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.codehaus.jackson#jackson-core-asl;1.9.13 from central in [default]
+
+2017-03-30 04:37:24,240 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.codehaus.jackson#jackson-mapper-asl;1.9.13 from central in [default]
+
+2017-03-30 04:37:24,245 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.slf4j#slf4j-api;1.7.5 from central in [default]
+
+2017-03-30 04:37:24,257 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.tukaani#xz;1.0 from central in [default]
+
+2017-03-30 04:37:24,268 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.xerial.snappy#snappy-java;1.0.5 from central in [default]
+
+2017-03-30 04:37:24,272 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	:: evicted modules:
+
+2017-03-30 04:37:24,274 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	org.slf4j#slf4j-api;1.6.4 by [org.slf4j#slf4j-api;1.7.5] in [default]
+
+2017-03-30 04:37:24,284 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	---------------------------------------------------------------------
+
+2017-03-30 04:37:24,300 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	|                  |            modules            ||   artifacts   |
+
+2017-03-30 04:37:24,303 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+
+2017-03-30 04:37:24,313 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	---------------------------------------------------------------------
+
+2017-03-30 04:37:24,316 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	|      default     |   10  |   9   |   9   |   1   ||   9   |   9   |
+
+2017-03-30 04:37:24,327 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	---------------------------------------------------------------------
+
+2017-03-30 04:37:24,334 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - :: retrieving :: org.apache.spark#spark-submit-parent
+
+2017-03-30 04:37:24,340 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	confs: [default]
+
+2017-03-30 04:37:24,352 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 	9 artifacts copied, 0 already retrieved (3120kB/15ms)
+
+2017-03-30 04:37:24,356 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:11 INFO org.spark_project.jetty.util.log: Logging initialized @6208ms
+
+2017-03-30 04:37:24,372 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:11 INFO org.spark_project.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+
+2017-03-30 04:37:24,375 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:11 INFO org.spark_project.jetty.server.ServerConnector: Started ServerConnector@76c3f857{HTTP/1.1}{0.0.0.0:4040}
+
+2017-03-30 04:37:24,387 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:11 INFO org.spark_project.jetty.server.Server: Started @6350ms
+
+2017-03-30 04:37:24,391 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:12 INFO com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,401 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:12 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-1-m/10.128.0.2:8032
+
+2017-03-30 04:37:24,409 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/com.databricks_spark-avro_2.11-3.2.0.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,418 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.5.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,430 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.apache.avro_avro-1.7.6.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,441 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,452 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,460 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.3.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,468 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.0.5.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,470 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.apache.commons_commons-compress-1.4.1.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,474 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:14 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.tukaani_xz-1.0.jar added multiple times to distributed cache.
+
+2017-03-30 04:37:24,486 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:15 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1490848535849_0001
+
+2017-03-30 04:37:24,499 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:21 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,508 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:23 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,521 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:24 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/sf_account.avsc' is not open.
+
+2017-03-30 04:37:24,531 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:26 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+
+17/03/30 04:36:33 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+
+17/03/30 04:36:40 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2NFO - 
+
+2017-03-30 04:37:24,547 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:41 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+
+2017-03-30 04:37:24,556 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:41 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+
+2017-03-30 04:37:24,561 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Deleted gs://bdc_incoming/sf_account.json
+
+2017-03-30 04:37:24,564 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Conversion to avro for the following file succeeded: gs://bdc_incoming/sf_account.json
+
+2017-03-30 04:37:24,580 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Converted file is located in: gs://bdc_processed/sf_account_c8c58977-8bbe-45b8-bc99-e4254a3f0522
+
+2017-03-30 04:37:24,587 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:42 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,590 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:43 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/sf_account2.avsc' is not open.
+
+2017-03-30 04:37:24,601 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:43 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+
+17/03/30 04:36:45 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+
+17/03/30 04:36:50 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2NFO - 
+
+2017-03-30 04:37:24,629 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:51 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+
+2017-03-30 04:37:24,640 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+
+2017-03-30 04:37:24,699 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Deleted gs://bdc_incoming/sf_account2.json
+
+2017-03-30 04:37:24,724 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Conversion to avro for the following file succeeded: gs://bdc_incoming/sf_account2.json
+
+2017-03-30 04:37:24,729 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Converted file is located in: gs://bdc_processed/sf_account2_6182686d-1d62-440b-b0be-8baa5807de03
+
+2017-03-30 04:37:24,734 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:52 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,744 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:53 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/example.avsc' is not open.
+
+2017-03-30 04:37:24,746 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:53 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+
+2017-03-30 04:37:24,763 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:54 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+
+2017-03-30 04:37:24,767 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:57 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,774 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:58 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+
+2017-03-30 04:37:24,778 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:58 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+
+2017-03-30 04:37:24,781 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Deleted gs://bdc_incoming/test_folder/example.json
+
+2017-03-30 04:37:24,791 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Conversion to avro for the following file succeeded: gs://bdc_incoming/test_folder/example.json
+
+2017-03-30 04:37:24,801 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Converted file is located in: gs://bdc_processed/example_9712a95d-e27b-430c-baa4-da16244a5503
+
+2017-03-30 04:37:24,807 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:36:59 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,811 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - copyToLocal: `gs://bdc_avro_schemas/sf_account3.avsc': No such file or directory
+
+2017-03-30 04:37:24,819 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:02 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,828 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:05 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_incoming/test_folder/sf_account3.json' is not open.
+
+2017-03-30 04:37:24,837 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:06 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,841 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:07 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+
+2017-03-30 04:37:24,852 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:07 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+
+2017-03-30 04:37:24,863 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Deleted gs://bdc_incoming/test_folder/sf_account3.json
+
+2017-03-30 04:37:24,866 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Processing for the following file failed: gs://bdc_incoming/test_folder/sf_account3.json
+
+2017-03-30 04:37:24,877 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Failed file has been moved to: gs://bdc_failed/sf_account3_fd30b6df-0542-4446-bcfe-8dced0693ba8.json
+
+2017-03-30 04:37:24,881 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:08 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,894 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:09 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/twitter.avsc' is not open.
+
+2017-03-30 04:37:24,900 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:09 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+
+2017-03-30 04:37:24,918 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:09 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+
+2017-03-30 04:37:24,922 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:13 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+
+2017-03-30 04:37:24,929 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:14 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+
+2017-03-30 04:37:24,936 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:14 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+
+2017-03-30 04:37:24,938 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Deleted gs://bdc_incoming/twitter.json
+
+2017-03-30 04:37:24,944 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Conversion to avro for the following file succeeded: gs://bdc_incoming/twitter.json
+
+2017-03-30 04:37:24,951 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Converted file is located in: gs://bdc_processed/twitter_a5acf862-345f-45de-92e2-e03c81599669
+
+2017-03-30 04:37:24,965 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 17/03/30 04:37:14 INFO org.spark_project.jetty.server.ServerConnector: Stopped ServerConnector@76c3f857{HTTP/1.1}{0.0.0.0:4040}
+
+2017-03-30 04:37:24,973 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - 
+
+2017-03-30 04:37:24,982 - json_to_avro_convert_watch_json_to_avro_convert_task - INFO - Tearing down cluster
+
+2017-03-30 04:37:24,995 - cron_executor - DEBUG - extending lease
+2017-03-30 04:37:26,028 - cron_executor - DEBUG - process ended
+2017-03-30 04:37:26,029 - cron_executor - DEBUG - acking [u'QBJMJAtESVMrQwsqWBFOBCEhPjA-RVNEUAYWLF1GSFE3GQhoUQ5PXiM_NSAoRRQICBQFfH12QlN1XV9yaFENGXJ9YHA4WxUIU0xWel9RGg5oVlxnNlEvJ3p0aHFoXhQBCkBSd19dM6jf991BZic9XxJLLD5-Lz5FQV4']
+2017-03-30 04:37:26,057 - cron_executor - DEBUG - pulling messages
+2017-03-30 04:38:54,098 - cron_executor - DEBUG - pulling messages

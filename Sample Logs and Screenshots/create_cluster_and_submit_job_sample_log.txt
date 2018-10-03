@@ -1,0 +1,136 @@
+Kenricks-iMac:Big Data Challenge kenrick$ python create_cluster_and_submit_job.py --project_id=big-data-challenge-162202 --zone=us-central1-a --cluster_name=cluster-1 --init_actions=gs://bdc_source/install_avro.sh --spark_packages=com.databricks:spark-avro_2.11:3.2.0 --gcs_bucket=bdc_source  --pyspark_file=json_to_avro.py
+Creating cluster.
+Waiting for cluster creation
+Cluster created.
+cluster-1 - RUNNING
+{'projectId': 'big-data-challenge-162202', 'job': {'pysparkJob': {'mainPythonFileUri': 'gs://bdc_source/json_to_avro.py', 'properties': {'spark.jars.packages': 'com.databricks:spark-avro_2.11:3.2.0'}}, 'placement': {'clusterName': 'cluster-1'}}}
+Submitted job ID fe8607a6-5cde-44f8-9ab3-c0d647fec8e2
+Waiting for job to finish...
+Job finished
+Downloading output file
+Received job output Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/usr/lib/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-avro_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent;1.0
+	confs: [default]
+	found com.databricks#spark-avro_2.11;3.2.0 in central
+	found org.slf4j#slf4j-api;1.7.5 in central
+	found org.apache.avro#avro;1.7.6 in central
+	found org.codehaus.jackson#jackson-core-asl;1.9.13 in central
+	found org.codehaus.jackson#jackson-mapper-asl;1.9.13 in central
+	found com.thoughtworks.paranamer#paranamer;2.3 in central
+	found org.xerial.snappy#snappy-java;1.0.5 in central
+	found org.apache.commons#commons-compress;1.4.1 in central
+	found org.tukaani#xz;1.0 in central
+downloading https://repo1.maven.org/maven2/com/databricks/spark-avro_2.11/3.2.0/spark-avro_2.11-3.2.0.jar ...
+	[SUCCESSFUL ] com.databricks#spark-avro_2.11;3.2.0!spark-avro_2.11.jar (31ms)
+downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar ...
+	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.5!slf4j-api.jar (15ms)
+downloading https://repo1.maven.org/maven2/org/apache/avro/avro/1.7.6/avro-1.7.6.jar ...
+	[SUCCESSFUL ] org.apache.avro#avro;1.7.6!avro.jar(bundle) (63ms)
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar ...
+	[SUCCESSFUL ] org.codehaus.jackson#jackson-core-asl;1.9.13!jackson-core-asl.jar (35ms)
+downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar ...
+	[SUCCESSFUL ] org.codehaus.jackson#jackson-mapper-asl;1.9.13!jackson-mapper-asl.jar (77ms)
+downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar ...
+	[SUCCESSFUL ] com.thoughtworks.paranamer#paranamer;2.3!paranamer.jar (12ms)
+downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.jar ...
+	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.0.5!snappy-java.jar(bundle) (88ms)
+downloading https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar ...
+	[SUCCESSFUL ] org.apache.commons#commons-compress;1.4.1!commons-compress.jar (25ms)
+downloading https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar ...
+	[SUCCESSFUL ] org.tukaani#xz;1.0!xz.jar (15ms)
+:: resolution report :: resolve 2241ms :: artifacts dl 369ms
+	:: modules in use:
+	com.databricks#spark-avro_2.11;3.2.0 from central in [default]
+	com.thoughtworks.paranamer#paranamer;2.3 from central in [default]
+	org.apache.avro#avro;1.7.6 from central in [default]
+	org.apache.commons#commons-compress;1.4.1 from central in [default]
+	org.codehaus.jackson#jackson-core-asl;1.9.13 from central in [default]
+	org.codehaus.jackson#jackson-mapper-asl;1.9.13 from central in [default]
+	org.slf4j#slf4j-api;1.7.5 from central in [default]
+	org.tukaani#xz;1.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.0.5 from central in [default]
+	:: evicted modules:
+	org.slf4j#slf4j-api;1.6.4 by [org.slf4j#slf4j-api;1.7.5] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   10  |   9   |   9   |   1   ||   9   |   9   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent
+	confs: [default]
+	9 artifacts copied, 0 already retrieved (3120kB/17ms)
+17/03/30 04:19:54 INFO org.spark_project.jetty.util.log: Logging initialized @5451ms
+17/03/30 04:19:54 INFO org.spark_project.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+17/03/30 04:19:54 INFO org.spark_project.jetty.server.ServerConnector: Started ServerConnector@51269bf7{HTTP/1.1}{0.0.0.0:4040}
+17/03/30 04:19:54 INFO org.spark_project.jetty.server.Server: Started @5576ms
+17/03/30 04:19:54 INFO com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:19:55 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-1-m/10.128.0.2:8032
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/com.databricks_spark-avro_2.11-3.2.0.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.5.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.apache.avro_avro-1.7.6.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.3.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.0.5.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.apache.commons_commons-compress-1.4.1.jar added multiple times to distributed cache.
+17/03/30 04:19:57 WARN org.apache.spark.deploy.yarn.Client: Same path resource file:/root/.ivy2/jars/org.tukaani_xz-1.0.jar added multiple times to distributed cache.
+17/03/30 04:19:57 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1490847556640_0001
+17/03/30 04:20:04 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:06 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:07 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/example.avsc' is not open.
+17/03/30 04:20:09 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+17/03/30 04:20:14 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+17/03/30 04:20:19 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:20 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+17/03/30 04:20:20 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted gs://bdc_incoming/example.json
+Conversion to avro for the following file succeeded: gs://bdc_incoming/example.json
+Converted file is located in: gs://bdc_processed/example_6dce60dc-4169-4fc6-8698-555de4561f17
+17/03/30 04:20:21 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:22 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/sf_account.avsc' is not open.
+17/03/30 04:20:22 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+17/03/30 04:20:25 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+17/03/30 04:20:33 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:33 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+17/03/30 04:20:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted gs://bdc_incoming/sf_account.json
+Conversion to avro for the following file succeeded: gs://bdc_incoming/sf_account.json
+Converted file is located in: gs://bdc_processed/sf_account_b75cb620-8742-48d3-8286-b6f427f038be
+17/03/30 04:20:34 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:35 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/sf_account2.avsc' is not open.
+17/03/30 04:20:36 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+17/03/30 04:20:37 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+17/03/30 04:20:42 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:43 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+17/03/30 04:20:43 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted gs://bdc_incoming/sf_account2.json
+Conversion to avro for the following file succeeded: gs://bdc_incoming/sf_account2.json
+Converted file is located in: gs://bdc_processed/sf_account2_e7649e6e-2e32-4220-b358-f58986ed7665
+17/03/30 04:20:44 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+copyToLocal: `gs://bdc_avro_schemas/sf_account3.avsc': No such file or directory
+17/03/30 04:20:46 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:49 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_incoming/test_folder/sf_account3.json' is not open.
+17/03/30 04:20:50 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:51 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+17/03/30 04:20:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted gs://bdc_incoming/test_folder/sf_account3.json
+Processing for the following file failed: gs://bdc_incoming/test_folder/sf_account3.json
+Failed file has been moved to: gs://bdc_failed/sf_account3_64b55205-f3d6-49d6-bd93-c8691de37de2.json
+17/03/30 04:20:52 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:53 WARN gcsio.GoogleCloudStorageReadChannel: Channel for 'gs://bdc_avro_schemas/twitter.avsc' is not open.
+17/03/30 04:20:53 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 1
+17/03/30 04:20:54 INFO com.databricks.spark.avro.DefaultSource: compressing Avro output using Snappy
+17/03/30 04:20:58 INFO gcs.GoogleHadoopFileSystemBase: GHFS version: 1.6.0-hadoop2
+17/03/30 04:20:58 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+17/03/30 04:20:58 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted gs://bdc_incoming/test_folder/twitter.json
+Conversion to avro for the following file succeeded: gs://bdc_incoming/test_folder/twitter.json
+Converted file is located in: gs://bdc_processed/twitter_ec23e46a-5345-4710-b5f4-b06a47e62ddc
+17/03/30 04:20:58 INFO org.spark_project.jetty.server.ServerConnector: Stopped ServerConnector@51269bf7{HTTP/1.1}{0.0.0.0:4040}
+
+Tearing down cluster
+Kenricks-iMac:Big Data Challenge kenrick$ 

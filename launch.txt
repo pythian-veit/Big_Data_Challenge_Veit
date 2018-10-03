@@ -1,0 +1,52 @@
+python create_cluster_and_submit_job.py --project_id=big-data-challenge-162202 --zone=us-central1-a --cluster_name=cluster-1 --init_actions=gs://bdc_source/install_avro.sh --spark_packages=com.databricks:spark-avro_2.11:3.2.0 --gcs_bucket=bdc_source  --pyspark_file=json_to_avro.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git clone https://github.com/GoogleCloudPlatform/reliable-task-scheduling-compute-engine-sample
+mv reliable* bdc_app_engine_app
+cd bdc_app_engine_app
+pip install -t gae/lib/ google-api-python-client
+
+--Only needed once:
+gcloud beta app create
+gcloud app deploy --version=1 gae/app.yaml \
+   gae/cron.yaml
+   
+
+--Had to enable additional scopes scopes   
+gcloud compute instances create cronworker \
+   --machine-type f1-micro \
+   --scopes https://www.googleapis.com/auth/pubsub,https://www.googleapis.com/auth/logging.write \
+   --zone us-central1-a
+   --scopes   
+   
+gcloud compute copy-files gce `whoami`@cronworker: \
+   --zone us-central1-a
+   
+gcloud compute ssh cronworker \
+   --zone us-central1-a
+   
+sudo apt-get update
+
+sudo apt-get install -y python-pip python-dev
+
+sudo pip install --upgrade google-api-python-client pytz
+
+sudo pip install google-cloud
+
+
+cd gce
+
+python test_executor.py
+
